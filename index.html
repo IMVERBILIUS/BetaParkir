@@ -1,81 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="CSS/bootstrap.min.css" />
     <link rel="stylesheet" href="CSS/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
     <!-- Bootstrap CSS -->
-
-    <!--JAVASCRIPT-->
-    <script src="main.js"></script>
-    <!--JAVASCRIPT-->
-
-    <title>parkir</title>
-    <!--CSS-->
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <!--CSS-->
+    <title>Kasir Parkir</title>
   </head>
-
   <body class="ganteng" style="background-image: url('images/bg-01.jpg');">
     <div class="last">
-      <table class="table">
-        <thead>
-          <tr>
-            <th class="satu ">parkir</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="btn btn-md">Jenis Kendaraan</td>
-          </tr>
-          <tr>
-            <td>
-              <input type="text" id="kendaraan" name="kendaraan" />
-            </td>
-          </tr>
-          <tr>
-            <td>Lama anda parkir</td>
-          </tr>
-          <tr>
-            <td><input type="text" id="waktu" name="waktu" /></td>
-          </tr>
-          <tr>
-            <td>
-              <button
-                type="button"
-                class=" btn btn-secondary btn-md"
-                id="parking"
-                onclick="parking() ;"
-              >
-                Jumlah
-              </button>
-            </td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td>Harga Parkir Mobil(car) 2 Jam Pertama</td>
-          </tr>
-          <tr>
-            <td>
-              <input type="text" placeholder="Rp 10.000" disabled />
-            </td>
-          </tr>
-          <tr>
-            <td>Harga Parkir Motor(bike) 2 Jam Pertama</td>
-          </tr>
-          <tr>
-            <td><input type="text" placeholder="Rp 5.000" disabled /></td>
-          </tr>
-        </tfoot>
-      </table>
+      <div class="mt-1">
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="satu ">parkir</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="btn btn-md">Waktu</td>
+            </tr>
+            <tr>
+              <td>
+                <input
+                  class="haikal"
+                  type="number"
+                  id="waktu"
+                  name="waktu"
+                  placeholder="Waktu"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td class="btn btn-md">Jenis Kendaraan</td>
+            </tr>
+            <tr>
+              <td>
+                <select class="box" id="kendaraan">
+                  <option value="_">Pilih</option>
+                  <option value="mobil">Mobil</option>
+                  <option value="motor">Motor</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mt-5">
+        <button type="" class="btn btn-secondary btn-md" id="countPrice">
+          Total
+        </button>
+      </div>
+
+      <div class="satu mt-4">
+        <h1 class="cak">Harga</h1>
+        <h2 id="price">Rp. 0</h2>
+
+        <div id="wrapBayar">
+          <table>
+            <tr>
+              <td><h6>Nominal</h6></td>
+            </tr>
+            <tr>
+              <td>
+                <input
+                  class="haikal"
+                  id="nominal"
+                  name="nominal"
+                  type="number"
+                />
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="mt-5">
+        <button type="button" class="btn btn-secondary btn-md" id="bayar">
+          Bayar
+        </button>
+      </div>
+
+      <div class="mt-5">
+        <button type="" class="btn btn-secondary btn-md" id="reset">
+          Reset
+        </button>
+      </div>
+
+      <div class="mandor mt-4" id="kembalian"></div>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="Parkirs.js"></script>
   </body>
 </html>
